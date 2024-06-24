@@ -256,14 +256,6 @@ export class OpenApiService {
       console.error('Error fetching wallet logos:', error);
     }
   }
-  // async getAppSummary(): Promise<AppSummary> {
-  //   const data = await this.httpGet('/default/app-summary', {});
-  //   if (data.status == API_STATUS.FAILED) {
-  //     throw new Error(data.message);
-  //   }
-  //   return data.result;
-  // }
-
   async pushTx(rawtx: string): Promise<string> {
     const data = await this.httpPost('/tx/broadcast', {
       rawtx
